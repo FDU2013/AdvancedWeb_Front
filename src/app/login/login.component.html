@@ -1,0 +1,17 @@
+<div class="main">
+  <div class = "title">
+    登录
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>用户名</mat-label>
+    <input matInput  [(ngModel)]="LoginForm.userID"  required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>密码</mat-label>
+    <input matInput  [(ngModel)]="LoginForm.password"  required>
+  </mat-form-field>
+  <a [routerLink]="['/register']">还没有账号？去注册</a>
+  <button mat-raised-button color="primary" (click) = "login() ">登录</button>
+</div>

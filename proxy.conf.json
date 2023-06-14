@@ -1,0 +1,26 @@
+{
+  "/api": {
+    "target": "http://localhost:5050",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/uis": {
+    "target": "https://uis.fudan.edu.cn/",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/uis": ""
+    }
+  },
+  "/img": {
+    "target": "https://sm.ms/api/v2/",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/img": ""
+    }
+  }
+}

@@ -1,0 +1,87 @@
+<div class="main">
+  <div class="title">
+    <app-page-header/>
+  </div>
+
+  <div class="intro">
+    <div class="header">
+      <h2>{{ "积分中心" }}</h2>
+    </div>
+    <div class="content">
+      <p>{{ "这里是积分中心，可以用你答题获得的积分兑换奖励！" }}</p>
+    </div>
+  </div>
+
+  <div class="info">
+    <p>您目前的积分为:{{personalInfo.score}}</p>
+  </div>
+
+  <div class="mid">
+
+    <div class="product">
+      <app-product-item *ngFor="let product of products"
+                        [itemID]="product.itemID"
+                        [imageURL]="product.imageURL"
+                        [itemName]="product.itemName"
+                        [cost]="product.cost"
+                        [description]="product.description"
+      ></app-product-item>
+    </div>
+  </div>
+
+  <div class="intro" style="background: #ffffff">
+    <div class="header">
+      <h2>{{ "兑换记录" }}</h2>
+    </div>
+    <div class="content">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin: 10px 0">
+
+        <ng-container matColumnDef="tradeID">
+          <th mat-header-cell *matHeaderCellDef> 序号 </th>
+          <td mat-cell *matCellDef="let element"> {{element.tradeID}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="itemID">
+          <th mat-header-cell *matHeaderCellDef> 商品ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.itemID}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="itemName">
+          <th mat-header-cell *matHeaderCellDef> 商品名 </th>
+          <td mat-cell *matCellDef="let element"> {{element.itemName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="cost">
+          <th mat-header-cell *matHeaderCellDef> 消耗积分 </th>
+          <td mat-cell *matCellDef="let element"> {{element.cost}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="code">
+          <th mat-header-cell *matHeaderCellDef> 兑换码 </th>
+          <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="time">
+          <th mat-header-cell *matHeaderCellDef> 兑换时间 </th>
+          <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="state">
+          <th mat-header-cell *matHeaderCellDef> 状态 </th>
+          <td mat-cell *matCellDef="let element"> {{element.state}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+      <mat-paginator [length]="total"
+                     [pageSize]="pageInfo.pageSize"
+                     [pageIndex]="pageInfo.pageNum"
+                     (page)="pageChanged($event)"
+                     [pageSizeOptions]="[5, 10, 25, 100]"
+                     aria-label="选择页">
+      </mat-paginator>
+    </div>
+  </div>
+</div>

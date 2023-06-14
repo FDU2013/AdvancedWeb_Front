@@ -1,0 +1,16 @@
+<div class="main">
+  <div class="img">
+    <img [src]="imageURL"/>
+  </div>
+  <div class="info">
+    <div class="name">
+      {{itemName}}
+    </div>
+
+    <div class="cost">
+      {{cost}}积分
+    </div>
+
+    <button mat-raised-button color="primary" (click)="submit()">兑换</button>
+  </div>
+</div>

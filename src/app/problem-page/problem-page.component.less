@@ -1,0 +1,125 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .intro{
+    margin: 20px auto;
+    width: 70%;
+    background-color: #f5f5f5;
+    color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    .header {
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 24px;
+        margin: 0;
+        color: #2979ff;
+      }
+    }
+
+    .content {
+      p {
+        font-size: 16px;
+        margin: 0;
+      }
+    }
+  }
+  .bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin:20px auto;
+    .personalInfo{
+      width: 30%;
+      background-color: #f5f5f5;
+      color: #333;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+        }
+      }
+
+      .info {
+        text-align: center;
+
+        h2 {
+          font-size: 24px;
+          margin-bottom: 10px;
+          color: #2979ff;
+        }
+
+        p {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+    .question {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      height: 500px;
+      width: 50%;
+
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        min-height: 60px;
+      }
+      .img{
+        width: 60%;
+      }
+      .options {
+        margin-top: 10px;
+
+        .option {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+          line-height: 32px;
+
+          input[type="radio"] {
+            margin-right: 8px;
+            appearance: none;
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #999999;
+            border-radius: 50%;
+            outline: none;
+            cursor: pointer;
+          }
+
+          input[type="radio"]:checked {
+            background-color: #999999;
+          }
+
+          label {
+            font-size: 16px;
+          }
+        }
+
+      }
+    }
+
+  }
+}

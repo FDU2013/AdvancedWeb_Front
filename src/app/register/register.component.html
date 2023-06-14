@@ -1,0 +1,49 @@
+<div class="main">
+
+  <div class="title">
+    注册
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>复旦uis</mat-label>
+    <input matInput  [(ngModel)]="registerRuleForm.uis"  required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>uis密码</mat-label>
+    <input matInput type="password" [(ngModel)]="registerRuleForm.uisPassword" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>用户名</mat-label>
+    <input matInput  [(ngModel)]="registerRuleForm.userID" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>密码</mat-label>
+    <input matInput type="password" [(ngModel)]="registerRuleForm.password" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>再次输入密码</mat-label>
+    <input matInput type="password" [(ngModel)]="registerRuleForm.passwordcheck" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>邮箱</mat-label>
+    <input matInput [(ngModel)]="registerRuleForm.email" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>电话</mat-label>
+    <input matInput  [(ngModel)]="registerRuleForm.phone" required>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>姓名</mat-label>
+    <input matInput  [(ngModel)]="registerRuleForm.name" required>
+  </mat-form-field>
+  <a [routerLink]="['/']">已有帐号？去登陆</a>
+  <button mat-raised-button color="primary" (click) = "register() ">注册</button>
+
+</div>

@@ -1,0 +1,32 @@
+<mat-form-field appearance="fill">
+  <mat-label>选择形象</mat-label>
+  <mat-select [(value)]="model">
+    <mat-option value="BeachBabe">BeachBabe</mat-option>
+    <mat-option value="BusinessMan">BusinessMan</mat-option>
+    <mat-option value="Doctor">Doctor</mat-option>
+    <mat-option value="FireFighter">FireFighter</mat-option>
+    <mat-option value="Housewife">Housewife</mat-option>
+    <mat-option value="Policeman">Policeman</mat-option>
+    <mat-option value="Prostitute">Prostitute</mat-option>
+    <mat-option value="Punk">Punk</mat-option>
+    <mat-option value="RiotCop">RiotCop</mat-option>
+    <mat-option value="Roadworker">Roadworker</mat-option>
+    <mat-option value="Robber">Robber</mat-option>
+    <mat-option value="Sheriff">Sheriff</mat-option>
+    <mat-option value="Streetman">Streetman</mat-option>
+    <mat-option value="Waitress">Waitress</mat-option>
+  </mat-select>
+
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+  <mat-label>选择肤色</mat-label>
+  <mat-select [(value)]="color">
+    <mat-option value="Black">Black</mat-option>
+    <mat-option value="Brown">Brown</mat-option>
+    <mat-option value="White">White</mat-option>
+  </mat-select>
+
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="submit()">进入游戏</button>
